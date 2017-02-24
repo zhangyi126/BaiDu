@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>IFE JavaScript Task 01</title>
-  </head>
+</head>
 <body>
 
-  <label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
-  <button id="button">确认填写</button>
+<label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+<button id="button">确认填写</button>
 
-  <div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+<div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
 
 <script type="text/javascript">
-  var input = document.getElementById('aqi-input');
-  var input_value = input.value;
-   var btn = document.getElementById('button');
-   btn.click = function(){
-     var display = document.getElementById('aqi-display');
-     display.innerHtml = input_value;
-   }
+    <!--获取“确认填写”按钮-->
+    var btn = document.getElementById('button');
+//为按钮绑定onclick事件
+    btn.onclick = function(){
+//        点击按钮后，获得输入框的值
+        var input =document.getElementById('aqi-input').value;
+//        获取显示区域的对象
+        var display = document.getElementById('aqi-display');
+//        将输入框的值赋给显示区域对象的inner HTML属性
+        display.innerHTML = input;
+    }
 
 </script>
 </body>
